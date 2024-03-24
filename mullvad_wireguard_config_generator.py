@@ -19,16 +19,15 @@ import pathlib
 import requests
 import os
 import sys
+import pprint
 
 MULLVAD_SERVER_LIST_ENDPOINT = "https://api.mullvad.net/www/relays/all/"
 ADDRESS = "10.555.555.555/32,fc00:bbbb:bbbb:bb01::5:511e/128"
 PRIVATE_KEY = "PUT YOUR PRIVATE KEY HERE"
 DNS = "1.1.1.1"
 FILE_ILLEGAL_CHARS = r"/?:\<>*|#, "
-
 CONFIG_DIRECTORY = f"{pathlib.Path().absolute()}\MullvadConfigs"
 
-import pprint
 # A filter that returns unique providers for each city
 # gives the server with the highest number
 # Returns a list of servers
